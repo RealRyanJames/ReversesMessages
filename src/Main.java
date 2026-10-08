@@ -27,6 +27,8 @@ void main() {
                 th.start();
             } catch (Exception ce) {
                 ce.fillInStackTrace();
+            } finally {
+                System.out.printf("Cannot Name of File %s", file.getName());
             }
         } else {
             try (FileWriter writer = new FileWriter(file.getName())) {
@@ -36,6 +38,9 @@ void main() {
                 th.start();
             } catch (Exception ce) {
                 ce.fillInStackTrace();
+            }
+            finally {
+                System.out.printf("Cannot Name of File %s", file.getName());
             }
         }
 
